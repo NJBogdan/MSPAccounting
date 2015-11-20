@@ -1,0 +1,9 @@
+﻿<Window x:Class="MSPAccounting.Views.ViewExpenses"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ViewExpenses" Height="467" Width="765">
+    <Grid>
+        <DataGrid x:Name="_DataGrid" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
