@@ -11,6 +11,7 @@ namespace MSPAccounting.Models
     {
         [Key]
         public int ID { get; set; }
+        [Required(ErrorMessage="A Name is required")]
         public string Name { get; set; }
         public ContactInfo ContactInfo { get; set; }
     }

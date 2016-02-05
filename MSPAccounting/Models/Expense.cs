@@ -11,12 +11,11 @@ namespace MSPAccounting.Models
     {
         [Key]
         public int ID { get; set; }
-        [Required]
+        [Required(ErrorMessage="A valid date is required")]
         public DateTime Date { get; set; }
-        [Required]
+        [Required(ErrorMessage="An ammount is required")]
         public decimal Amount { get; set; }
-        [Required]
         public string Comments { get; set; }
-        //public Client Client;
+        public Client Client;
     }
 }

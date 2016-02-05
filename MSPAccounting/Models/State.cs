@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace MSPAccounting.Models
 {
-    class Appointment
+    class State
     {
         [Key]
         public int ID { get; set; }
-        public DateTime Date { get; set; }
-        public string Location { get; set; }
-        public Client Client { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Abbreviation { get; set; }
     }
 }

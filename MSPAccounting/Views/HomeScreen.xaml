@@ -1,0 +1,12 @@
+﻿<Window x:Class="MSPAccounting.Views.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MSP Accounting - Home Screen (Pre-Alpha)" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="btn_addExpense" Content="Add Expense" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="-0.227,0.136" Click="btn_addExpense_Click"/>
+        <Button x:Name="btn_ViewExpenses" Content="View Expenses" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="87" Click="btn_ViewExpenses_Click"/>
+        <Button x:Name="btn_AddAppt" Content="Add Appt." HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="87" Click="btn_AddAppt_Click"/>
+        <Button x:Name="btn_AddClient" Content="Add Client" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="87" Click="Button_Click"/>
+
+    </Grid>
+</Window>

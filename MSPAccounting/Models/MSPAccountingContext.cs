@@ -14,5 +14,6 @@ namespace MSPAccounting.Models
         public DbSet<ContactInfo> ContactInfo { get; set; }
         public DbSet<Earning> Earning { get; set; }
         public DbSet<Expense> Expense { get; set; }
+        public DbSet<State> State { get; set; }
     }
 }

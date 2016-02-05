@@ -15,14 +15,14 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MSPAccounting.Views;
 
-namespace MSPAccounting
+namespace MSPAccounting.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomeScreen : Window
     {
-        public MainWindow()
+        public HomeScreen()
         {
             InitializeComponent();
         }
@@ -35,6 +35,16 @@ namespace MSPAccounting
         private void btn_ViewExpenses_Click(object sender, RoutedEventArgs e)
         {
             new ViewExpenses().Show();
+        }
+
+        private void btn_AddAppt_Click(object sender, RoutedEventArgs e)
+        {
+            new CreateAppointment().Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new CreateClient().Show();
         }
     }
 }

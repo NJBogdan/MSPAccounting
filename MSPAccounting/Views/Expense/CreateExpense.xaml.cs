@@ -1,4 +1,5 @@
-﻿using MSPAccounting.Models;
+﻿using MSPAccounting.DataValidation;
+using MSPAccounting.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
@@ -38,8 +39,17 @@ namespace MSPAccounting.Views
                     //expense.Client = new Client();
                     expense.Comments = txtbx_Comments.Text;
 
-                    db.Expense.Add(expense);
-                    db.SaveChanges();
+                    var errors = DataValidator.GetModelErrors(expense);
+
+                    if (errors.Count > 0)
+                    {
+                        new ErrorDisplay(errors).Show();
+                    }
+                    else
+                    {
+                        db.Expense.Add(expense);
+                        db.SaveChanges();
+                    }
                 }
             }
 

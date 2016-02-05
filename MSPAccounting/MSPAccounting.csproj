@@ -78,6 +78,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataValidation\DataValidator.cs" />
+    <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="Migrations\201511200207467_InitialCreate.cs" />
     <Compile Include="Migrations\201511200207467_InitialCreate.Designer.cs">
       <DependentUpon>201511200207467_InitialCreate.cs</DependentUpon>
@@ -86,14 +88,52 @@
     <Compile Include="Migrations\201511200229552_RenameAmmountToAmount.Designer.cs">
       <DependentUpon>201511200229552_RenameAmmountToAmount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602051843387_RemoveEndDateFromAppointment.cs" />
+    <Compile Include="Migrations\201602051843387_RemoveEndDateFromAppointment.Designer.cs">
+      <DependentUpon>201602051843387_RemoveEndDateFromAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602052010570_AddStateAbbreviation.cs" />
+    <Compile Include="Migrations\201602052010570_AddStateAbbreviation.Designer.cs">
+      <DependentUpon>201602052010570_AddStateAbbreviation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602052030232_ChangeStateAbbreviationToState.cs" />
+    <Compile Include="Migrations\201602052030232_ChangeStateAbbreviationToState.Designer.cs">
+      <DependentUpon>201602052030232_ChangeStateAbbreviationToState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602052103345_AddedStateToContactInfo.cs" />
+    <Compile Include="Migrations\201602052103345_AddedStateToContactInfo.Designer.cs">
+      <DependentUpon>201602052103345_AddedStateToContactInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602052140554_UpdatedValidation.cs" />
+    <Compile Include="Migrations\201602052140554_UpdatedValidation.Designer.cs">
+      <DependentUpon>201602052140554_UpdatedValidation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Views\CreateExpense.xaml.cs">
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Views\Appointment\CreateAppointment.xaml.cs">
+      <DependentUpon>CreateAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\CreateClient.xaml.cs">
+      <DependentUpon>CreateClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Errors\ErrorDisplay.xaml.cs">
+      <DependentUpon>ErrorDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expense\CreateExpense.xaml.cs">
       <DependentUpon>CreateExpense.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ViewExpenses.xaml.cs">
+    <Compile Include="Views\Expense\ViewExpenses.xaml.cs">
       <DependentUpon>ViewExpenses.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\Client\CreateClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Errors\ErrorDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HomeScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -101,15 +141,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Views\HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\CreateExpense.xaml">
+    <Page Include="Views\Appointment\CreateAppointment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ViewExpenses.xaml">
+    <Page Include="Views\Expense\CreateExpense.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Expense\ViewExpenses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,6 +183,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511200229552_RenameAmmountToAmount.resx">
       <DependentUpon>201511200229552_RenameAmmountToAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602051843387_RemoveEndDateFromAppointment.resx">
+      <DependentUpon>201602051843387_RemoveEndDateFromAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602052010570_AddStateAbbreviation.resx">
+      <DependentUpon>201602052010570_AddStateAbbreviation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602052030232_ChangeStateAbbreviationToState.resx">
+      <DependentUpon>201602052030232_ChangeStateAbbreviationToState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602052103345_AddedStateToContactInfo.resx">
+      <DependentUpon>201602052103345_AddedStateToContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602052140554_UpdatedValidation.resx">
+      <DependentUpon>201602052140554_UpdatedValidation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
