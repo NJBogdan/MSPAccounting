@@ -1,4 +1,4 @@
-﻿using MSPAccounting.Data_Annotations;
+﻿using MSPAccounting.DataAnnotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;

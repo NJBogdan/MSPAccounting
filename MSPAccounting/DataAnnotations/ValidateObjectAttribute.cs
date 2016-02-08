@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MSPAccounting.Data_Annotations
+namespace MSPAccounting.DataAnnotations
 {
     //Referenced from http://www.technofattie.com/2011/10/05/recursive-validation-using-dataannotations.html
     public class ValidateObjectAttribute : ValidationAttribute

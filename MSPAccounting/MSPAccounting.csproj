@@ -78,7 +78,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Data Annotations\ValidateObjectAttribute.cs" />
+    <Compile Include="DataAnnotations\ValidateObjectAttribute.cs" />
     <Compile Include="DataValidation\DataValidator.cs" />
     <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="Migrations\201511200207467_InitialCreate.cs" />
@@ -121,6 +121,9 @@
     <Compile Include="Views\Client\CreateClient.xaml.cs">
       <DependentUpon>CreateClient.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Earning\CreateEarning.xaml.cs">
+      <DependentUpon>CreateEarning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Errors\ErrorDisplay.xaml.cs">
       <DependentUpon>ErrorDisplay.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <DependentUpon>ViewExpenses.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Client\CreateClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Earning\CreateEarning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
