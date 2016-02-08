@@ -72,7 +72,6 @@ namespace MSPAccounting.Views
                     db.Client.Add(client);
                     db.SaveChanges();
                 }
-
             }
         }
 

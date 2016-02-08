@@ -1,9 +1,9 @@
 ﻿<Window x:Class="MSPAccounting.Views.ErrorDisplay"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Display Errors" Height="300" Width="300">
+        Title="Display Errors" Height="308.238" Width="300">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <TextBlock x:Name="ErrorList" HorizontalAlignment="Stretch" Margin="0,0,0,53" TextWrapping="Wrap" Text="" Foreground="Red" ScrollViewer.CanContentScroll="True" />
-        <Button Content="Close" Margin="108,233,109,15" Click="Button_Click"/>
+        <Button Content="Close" Margin="108,231,109,17" Click="Button_Click" />
     </Grid>
 </Window>

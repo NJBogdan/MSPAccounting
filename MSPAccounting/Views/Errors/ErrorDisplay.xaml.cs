@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MSPAccounting.Data_Annotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,18 @@ namespace MSPAccounting.Views
             var errorString = "";
             foreach(var error in errors)
             {
-                errorString += error.ErrorMessage + System.Environment.NewLine;
+                //Validating subclasses
+                if (error is CompositeValidationResult)
+                {
+                    foreach (var subError in ((CompositeValidationResult)error).Results)
+                    {
+                        errorString += subError.ErrorMessage + System.Environment.NewLine;
+                    }
+                }
+                else
+                {
+                    errorString += error.ErrorMessage + System.Environment.NewLine;
+                }
             }
             errorString = errorString.Trim();
 

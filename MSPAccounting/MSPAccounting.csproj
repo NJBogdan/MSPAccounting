@@ -78,6 +78,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data Annotations\ValidateObjectAttribute.cs" />
     <Compile Include="DataValidation\DataValidator.cs" />
     <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="Migrations\201511200207467_InitialCreate.cs" />
