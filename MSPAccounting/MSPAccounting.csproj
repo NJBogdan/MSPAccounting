@@ -109,6 +109,10 @@
     <Compile Include="Migrations\201602052140554_UpdatedValidation.Designer.cs">
       <DependentUpon>201602052140554_UpdatedValidation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602081825065_UpdatedAppointment-Earning.cs" />
+    <Compile Include="Migrations\201602081825065_UpdatedAppointment-Earning.Designer.cs">
+      <DependentUpon>201602081825065_UpdatedAppointment-Earning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Views\Appointment\CreateAppointment.xaml.cs">
@@ -199,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602052140554_UpdatedValidation.resx">
       <DependentUpon>201602052140554_UpdatedValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602081825065_UpdatedAppointment-Earning.resx">
+      <DependentUpon>201602081825065_UpdatedAppointment-Earning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
