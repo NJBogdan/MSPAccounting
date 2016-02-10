@@ -21,7 +21,7 @@ namespace MSPAccounting.Models
                 ID = ID,
                 ClientName = Client.Name,
                 Date = Date.ToShortDateString(),
-                Amount = String.Format("{0:C", Amount)
+                Amount = String.Format("{0:C}", Amount)
             };
         }
     }

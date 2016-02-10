@@ -27,16 +27,22 @@ namespace MSPAccounting.Views
                 if (earnings.Count == 0)
                 {
                     dataGridEarnings.Visibility = Visibility.Collapsed;
-                    //txtblkNoClients.Visibility = Visibility.Visible;
+                    txtblkNoEarnings.Visibility = Visibility.Visible;
                 }
                 else
                 {
                     dataGridEarnings.Visibility = Visibility.Visible;
-                    //txtblkNoClients.Visibility = Visibility.Collapsed;
+                    txtblkNoEarnings.Visibility = Visibility.Collapsed;
 
                     dataGridEarnings.ItemsSource = utilities.GetViewModelList<Earning, EarningView>(earnings);
                 }
             }
+        }
+
+        private void btnCreateEarning_Click(object sender, RoutedEventArgs e)
+        {
+            new CreateEarning().ShowDialog();
+            Load();
         }
     }
 }

@@ -15,7 +15,7 @@
                 <DataGridTextColumn Header="Mailing Address" Binding="{Binding Address}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnCreateClient" Content="Add a client" HorizontalAlignment="Center" Margin="0,0,0,5" VerticalAlignment="Bottom" Width="75" Click="btnCreateClient_Click"/>
+        <Button x:Name="btnCreateClient" Content="Add a Client" HorizontalAlignment="Center" Margin="0,0,0,5" VerticalAlignment="Bottom" Width="75" Click="btnCreateClient_Click"/>
         <TextBlock x:Name="txtblkNoClients" HorizontalAlignment="Stretch" Margin="0,0,0,0" TextWrapping="Wrap" Text="You don't seem to have any clients! Click the button below to start adding some." VerticalAlignment="Top" Foreground="Crimson" FontSize="13" FontWeight="Bold"/>
     </Grid>
 </UserControl>
