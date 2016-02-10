@@ -1,18 +1,7 @@
-﻿using MSPAccounting.DataValidation;
-using MSPAccounting.Models;
+﻿using MSPAccounting.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace MSPAccounting.Views
 {
@@ -35,7 +24,7 @@ namespace MSPAccounting.Views
                 appointment.Date = Convert.ToDateTime(dtpDate.Value);
                 appointment.Location = txtbxLocation.Text;
 
-                var errors = DataValidator.GetModelErrors(appointment);
+                var errors = appointment.GetModelErrors();
                 if (errors.Count > 0)
                 {
                     new ErrorDisplay(errors).Show();

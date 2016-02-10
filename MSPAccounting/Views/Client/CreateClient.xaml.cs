@@ -1,10 +1,7 @@
-﻿using MSPAccounting.DataValidation;
-using MSPAccounting.Helpers;
+﻿using MSPAccounting.Helpers;
 using MSPAccounting.Models;
-using System;
 using System.Linq;
 using System.Windows;
-using System.Windows.Input;
 
 namespace MSPAccounting.Views
 {
@@ -49,7 +46,7 @@ namespace MSPAccounting.Views
                 client.ContactInfo.State = db.State.Where(x => x.ID == ((State)cmbbx_State.SelectedItem).ID).FirstOrDefault();
                 client.ContactInfo.Zip = txtbx_Zip.Text;
 
-                var errors = DataValidator.GetModelErrors(client);
+                var errors = client.GetModelErrors();
                 if(errors.Count > 0)
                 {
                     new ErrorDisplay(errors).Show();

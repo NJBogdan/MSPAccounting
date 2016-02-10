@@ -1,8 +1,7 @@
 namespace MSPAccounting.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class AddStateAbbreviation : DbMigration
     {
         public override void Up()

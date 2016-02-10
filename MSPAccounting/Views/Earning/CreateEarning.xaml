@@ -1,12 +1,21 @@
-﻿<Window x:Class="MSPAccounting.Views.CreateEarning"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MSPAccounting.Views"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="MSPAccounting.Views.CreateEarning"
         mc:Ignorable="d"
-        Title="CreateEarning" Height="300" Width="300">
+        Title="CreateEarning" Height="250" Width="400">
     <Grid>
+        <Label x:Name="lblDate" Content="Date of Expense:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <xctk:DateTimePicker HorizontalAlignment="Left" Margin="108,16,0,0" VerticalAlignment="Top" Width="148"/>
         
+        <Label x:Name="lblAmount" Content="Amount:" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.026,0.272"/>
+        <TextBox x:Name="txtbxAmount" HorizontalAlignment="Left" Height="23" Margin="65,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191"/>
+        
+        <Label x:Name="lblClient" Content="Client:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.137,1.048"/>
+        <ComboBox x:Name="cmbbxClient" HorizontalAlignment="Left" Margin="53,69,0,0" VerticalAlignment="Top" Width="203"/>
+        <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="center" Margin="0,0,0,5" VerticalAlignment="Bottom" Width="75" Click="btnCreate_Click"/>
     </Grid>
 </Window>

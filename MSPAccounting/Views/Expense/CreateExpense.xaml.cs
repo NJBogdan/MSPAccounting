@@ -1,19 +1,7 @@
-﻿using MSPAccounting.DataValidation;
-using MSPAccounting.Models;
+﻿using MSPAccounting.Models;
 using System;
-using System.Collections.Generic;
-using System.Data.Entity.Validation;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace MSPAccounting.Views
 {
@@ -39,7 +27,7 @@ namespace MSPAccounting.Views
                     //expense.Client = new Client();
                     expense.Comments = txtbx_Comments.Text;
 
-                    var errors = DataValidator.GetModelErrors(expense);
+                    var errors = expense.GetModelErrors();
 
                     if (errors.Count > 0)
                     {

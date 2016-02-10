@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MSPAccounting.Interfaces;
+using System;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MSPAccounting.Models
 {
-    public class Expense
+    public class Expense : BaseModel<ExpenseView>
     {
         [Key]
         public int ID { get; set; }
@@ -17,5 +14,15 @@ namespace MSPAccounting.Models
         public decimal Amount { get; set; }
         public string Comments { get; set; }
         public Client Client;
+
+        public override ExpenseView ToViewModel()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ExpenseView : IViewModel
+    {
+        public int ID { get; set; }
     }
 }

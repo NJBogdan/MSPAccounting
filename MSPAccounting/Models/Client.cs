@@ -1,11 +1,7 @@
 ﻿using MSPAccounting.DataAnnotations;
 using MSPAccounting.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MSPAccounting.Models
 {
@@ -25,8 +21,22 @@ namespace MSPAccounting.Models
                 ID = ID,
                 Name = Name,
                 Phone = ContactInfo.Phone,
-                Email = ContactInfo.Email
+                Email = ContactInfo.Email,
+                Address =  BuildPostalAddress()
             };
+        }
+
+        private string BuildPostalAddress()
+        {
+            var newLine = System.Environment.NewLine;
+            var address = ContactInfo.AddressLine1 + newLine;
+            if(!String.IsNullOrWhiteSpace(ContactInfo.AddressLine2))
+            {
+                address += ContactInfo.AddressLine2 + newLine;
+            }
+            address += String.Format("{0} {1} {2}", ContactInfo.City, ContactInfo.State.Abbreviation, ContactInfo.Zip);
+
+            return address;
         }
     }
 
@@ -36,5 +46,6 @@ namespace MSPAccounting.Models
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
+        public string Address { get; set; }
     }
 }
