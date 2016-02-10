@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MSPAccounting.Models
 {
-    class Appointment
+    public class Appointment
     {
         [Key]
         public int ID { get; set; }

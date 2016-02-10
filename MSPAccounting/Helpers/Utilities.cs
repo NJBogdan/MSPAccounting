@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MSPAccounting.Interfaces;
+using MSPAccounting.Models;
+using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace MSPAccounting.Helpers
@@ -9,6 +12,14 @@ namespace MSPAccounting.Helpers
         {
             MemberExpression body = (MemberExpression)expr.Body;
             return body.Member.Name;
+        }
+
+        public IEnumerable<T> GetViewModelList<S,T>(List<S> records) where T : IViewModel where S : BaseModel<T>
+        {
+            foreach (var record in records)
+            {     
+                yield return (record as BaseModel<T>).ToViewModel();
+            }
         }
     }
 }

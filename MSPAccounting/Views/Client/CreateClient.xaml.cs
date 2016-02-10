@@ -46,21 +46,8 @@ namespace MSPAccounting.Views
                 client.ContactInfo.AddressLine1 = txtbx_Addr1.Text;
                 client.ContactInfo.AddressLine2 = txtbx_Addr2.Text;
                 client.ContactInfo.City = txtbx_City.Text;
-                client.ContactInfo.State = (State)cmbbx_State.SelectedItem;
-                client.ContactInfo.Zip = Int32.Parse(txtbx_Zip.Text);
-                //{
-                //    Name = txtbx_Name.Text,
-                //    ContactInfo = new ContactInfo
-                //    {
-                //        Phone = txtbx_Phone.Text,
-                //        Email = txtbx_Email.Text,
-                //        AddressLine1 = txtbx_Addr1.Text,
-                //        AddressLine2 = txtbx_Addr2.Text,
-                //        City = txtbx_City.Text,
-                //        State = (State)cmbbx_State.SelectedItem,
-                //        Zip = Int32.Parse(txtbx_City.Text)
-                //    }
-                //};
+                client.ContactInfo.State = db.State.Where(x => x.ID == ((State)cmbbx_State.SelectedItem).ID).FirstOrDefault();
+                client.ContactInfo.Zip = txtbx_Zip.Text;
 
                 var errors = DataValidator.GetModelErrors(client);
                 if(errors.Count > 0)
@@ -71,14 +58,12 @@ namespace MSPAccounting.Views
                 {
                     db.Client.Add(client);
                     db.SaveChanges();
+
+                    MessageBox.Show("Client Successfully Created!", "Success", MessageBoxButton.OK);
+
+                    this.Close();
                 }
             }
-        }
-
-        private void txtbx_Zip_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            if (!char.IsDigit(e.Text, e.Text.Length - 1))
-                e.Handled = true;
         }
     }
 }

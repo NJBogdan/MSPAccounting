@@ -17,7 +17,7 @@
         <TextBox x:Name="txtbx_Addr1" HorizontalAlignment="Left" Height="23" Margin="86,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
         <TextBox x:Name="txtbx_Addr2" HorizontalAlignment="Left" Height="23" Margin="86,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
         <TextBox x:Name="txtbx_City" HorizontalAlignment="Left" Height="23" Margin="45,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197"/>
-        <TextBox x:Name="txtbx_Zip" HorizontalAlignment="Left" Height="23" Margin="42,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" PreviewTextInput="txtbx_Zip_PreviewTextInput"/>
+        <TextBox x:Name="txtbx_Zip" HorizontalAlignment="Left" Height="23" Margin="42,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <ComboBox x:Name="cmbbx_State" HorizontalAlignment="Left" Margin="46,180,0,0" VerticalAlignment="Top" Width="196"/>
         <Button x:Name="btn_Create" Content="Create" Margin="238,271,229,0" VerticalAlignment="Top" HorizontalAlignment="Center" Click="btn_Create_Click"/>
 

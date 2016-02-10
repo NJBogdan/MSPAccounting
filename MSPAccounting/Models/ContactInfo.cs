@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MSPAccounting.Models
 {
-    class ContactInfo
+    public class ContactInfo
     {
         [Key]
         public int ID { get; set; }
@@ -19,6 +19,7 @@ namespace MSPAccounting.Models
         public string AddressLine2 { get; set; }
         public string City { get; set; }
         public State State { get; set; }
-        public int Zip { get; set; }
+        [RegularExpression(@"\d{5}(?:[-\s]\d{4})?$", ErrorMessage ="Enter a valid zip code: xxxxx or xxxxx-xxxx")]
+        public string Zip { get; set; }
     }
 }
