@@ -3,11 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="clr-namespace:MSPAccounting.Views"
         Title="MSP Accounting - Home Screen (Pre-Alpha)" Height="600" Width="800">
-    <Grid Margin="0,0,0,0">
-        <Button x:Name="btn_addExpense" Content="Add Expense" HorizontalAlignment="Left" Margin="10,0,0,10" Width="87" RenderTransformOrigin="-0.227,0.136" Click="btn_addExpense_Click" Height="22" VerticalAlignment="Bottom"/>
-        <Button x:Name="btn_ViewExpenses" Content="View Expenses" HorizontalAlignment="Left" Margin="194,0,0,10" Width="87" Click="btn_ViewExpenses_Click" Height="22" VerticalAlignment="Bottom"/>
+    <Grid>
         <Button x:Name="btn_AddAppt" Content="Add Appt." HorizontalAlignment="Left" Margin="102,0,0,10" Width="87" Click="btn_AddAppt_Click" Height="22" VerticalAlignment="Bottom"/>
-        <Button x:Name="btn_AddClient" Content="Add Client" HorizontalAlignment="Left" Margin="286,0,0,10" Width="87" Click="Button_Click" Height="22" VerticalAlignment="Bottom"/>
+        <Button x:Name="btn_AddClient" Content="Add Client" HorizontalAlignment="Left" Margin="194,0,0,10" Width="87" Click="Button_Click" Height="22" VerticalAlignment="Bottom"/>
         <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" Margin="10,10,10,40" VerticalAlignment="Stretch"  Grid.ColumnSpan="4">
             <TabItem x:Name="tiAppointments" Header="Appointments">
                 <Grid Background="Beige">
@@ -20,7 +18,7 @@
             </TabItem>
             <TabItem x:Name="tiExpenses" Header="Expenses">
                 <Grid Background="Beige">
-
+                    <controls:ViewExpenses></controls:ViewExpenses>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tiEarnings" Header="Earnings">

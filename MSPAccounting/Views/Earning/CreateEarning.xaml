@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MSPAccounting.Views"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="MSPAccounting.Views.CreateEarning"
         mc:Ignorable="d"
-        Title="CreateEarning" Height="170" Width="350">
+        Title="CreateEarning" Height="250" Width="600">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,10,0,0">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
@@ -20,6 +20,10 @@
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
                 <Label Width="100" x:Name="lblClient" Content="Client:" VerticalAlignment="center"/>
                 <ComboBox x:Name="cmbbxClient"  VerticalAlignment="Center" Width="200"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="80" Content="Comments:" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtbxComments" TextWrapping="Wrap" VerticalAlignment="Center" Height="70" Width="480"/>
             </StackPanel>
         </StackPanel>
         <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="center" Margin="0,0,0,5" VerticalAlignment="Bottom" Width="75" Click="btnCreate_Click"/>

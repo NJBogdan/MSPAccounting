@@ -10,19 +10,28 @@ namespace MSPAccounting.Models
         public int ID { get; set; }
         [Required(ErrorMessage="A valid date is required")]
         public DateTime Date { get; set; }
-        [Required(ErrorMessage="An ammount is required")]
+        [Required(ErrorMessage="An amount is required")]
         public decimal Amount { get; set; }
         public string Comments { get; set; }
-        public Client Client;
+        public virtual Client Client { get; set; }
 
         public override ExpenseView ToViewModel()
         {
-            throw new NotImplementedException();
+            return new ExpenseView()
+            {
+                ID = ID,
+                ClientName = Client == null ? String.Empty : Client.Name,
+                Date = Date.ToShortDateString(),
+                Amount = String.Format("{0:C}", Amount)
+            };
         }
     }
 
     public class ExpenseView : IViewModel
     {
         public int ID { get; set; }
+        public string ClientName { get; set; }
+        public string Date { get; set; }
+        public string Amount { get; set; }
     }
 }

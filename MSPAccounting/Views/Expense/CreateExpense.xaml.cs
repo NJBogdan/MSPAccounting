@@ -1,6 +1,7 @@
 ﻿using MSPAccounting.Models;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 
 namespace MSPAccounting.Views
@@ -15,17 +16,20 @@ namespace MSPAccounting.Views
             InitializeComponent();
         }
 
-        private void btn_Create_Click(object sender, RoutedEventArgs e)
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 using (var db = new MSPAccountingContext())
                 {
-                    var expense = new Expense();
-                    expense.Date = datetime_Date.Value == null ? DateTime.Now : (DateTime)datetime_Date.Value;
-                    expense.Amount = Convert.ToDecimal(txtbx_Amount.Text);
-                    //expense.Client = new Client();
-                    expense.Comments = txtbx_Comments.Text;
+                    var isClientSelected = cmbbxClient.SelectedItem != null;
+                    var expense = new Expense()
+                    {
+                        Date = datetime_Date.Value == null ? DateTime.Now : (DateTime)datetime_Date.Value,
+                        Amount = dcmlAmount.Value == null ? 0 : (decimal)dcmlAmount.Value,
+                        Client = isClientSelected ? db.Client.SingleOrDefault(x => x.ID == ((Client)cmbbxClient.SelectedItem).ID) : null,
+                        Comments = txtbxComments.Text
+                    };
 
                     var errors = expense.GetModelErrors();
 

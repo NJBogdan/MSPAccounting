@@ -45,7 +45,8 @@ namespace MSPAccounting.Views
                 {
                     Date = dtDate.Value == null ? DateTime.Now : (DateTime)dtDate.Value,
                     Amount = Decimal.Parse(txtbxAmount.Text),
-                    Client = db.Client.Single(x => x.ID == ((Client)cmbbxClient.SelectedItem).ID)
+                    Client = db.Client.Single(x => x.ID == ((Client)cmbbxClient.SelectedItem).ID),
+                    Comments = txtbxComments.Text
                 };
 
                 var errors = earning.GetModelErrors();
@@ -60,7 +61,6 @@ namespace MSPAccounting.Views
                     db.SaveChanges();
 
                     MessageBox.Show("Earning Created!");
-
                     Close();
                 }
             }

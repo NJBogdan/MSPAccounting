@@ -14,8 +14,7 @@
                 <DataGridTextColumn Header="Client" Binding="{Binding ClientName}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBlock x:Name="txtblkNoEarnings" HorizontalAlignment="Stretch" Margin="0,0,0,0" TextWrapping="Wrap" Text="You don't seem to have any earnings! Click the button below to start adding some." VerticalAlignment="Top" Foreground="Crimson" FontSize="13" FontWeight="Bold"/>
+        <TextBlock x:Name="txtblkNoEarnings" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="You don't seem to have any earnings! Click the button below to start adding some." Foreground="Crimson" FontSize="13" FontWeight="Bold"/>
         <Button x:Name="btnCreateEarning" Content="Add an Earning" HorizontalAlignment="Center" Margin="0,0,0,5" VerticalAlignment="Bottom" Width="100" Click="btnCreateEarning_Click"/>
-
     </Grid>
 </UserControl>

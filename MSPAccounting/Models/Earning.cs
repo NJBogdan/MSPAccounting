@@ -12,6 +12,7 @@ namespace MSPAccounting.Models
         public DateTime Date { get; set; }
         [Required(ErrorMessage = "An ammount is required")]
         public decimal Amount { get; set; }
+        public string Comments { get; set; }
         public virtual Client Client { get; set; }
 
         public override EarningView ToViewModel()

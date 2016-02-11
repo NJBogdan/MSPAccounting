@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSPAccounting</RootNamespace>
     <AssemblyName>MSPAccounting</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -118,6 +118,14 @@
     <Compile Include="Migrations\201602082135381_UpdateZipToString.Designer.cs">
       <DependentUpon>201602082135381_UpdateZipToString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602110120384_updateClient.cs" />
+    <Compile Include="Migrations\201602110120384_updateClient.Designer.cs">
+      <DependentUpon>201602110120384_updateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602110123227_AddCommentsTOearning.cs" />
+    <Compile Include="Migrations\201602110123227_AddCommentsTOearning.Designer.cs">
+      <DependentUpon>201602110123227_AddCommentsTOearning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\State.cs" />
@@ -139,11 +147,11 @@
     <Compile Include="Views\Expense\CreateExpense.xaml.cs">
       <DependentUpon>CreateExpense.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Expense\ViewExpenses.xaml.cs">
-      <DependentUpon>ViewExpenses.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Client\ViewClients.xaml.cs">
       <DependentUpon>ViewClients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expense\ViewExpenses.xaml.cs">
+      <DependentUpon>ViewExpenses.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Client\CreateClient.xaml">
       <SubType>Designer</SubType>
@@ -181,11 +189,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Expense\ViewExpenses.xaml">
+    <Page Include="Views\Client\ViewClients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Client\ViewClients.xaml">
+    <Page Include="Views\Expense\ViewExpenses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,6 +244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602082135381_UpdateZipToString.resx">
       <DependentUpon>201602082135381_UpdateZipToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602110120384_updateClient.resx">
+      <DependentUpon>201602110120384_updateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602110123227_AddCommentsTOearning.resx">
+      <DependentUpon>201602110123227_AddCommentsTOearning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

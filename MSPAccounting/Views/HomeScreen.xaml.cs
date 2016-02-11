@@ -12,16 +12,6 @@ namespace MSPAccounting.Views
             InitializeComponent();
         }
 
-        private void btn_addExpense_Click(object sender, RoutedEventArgs e)
-        {
-            new CreateExpense().Show();
-        }
-
-        private void btn_ViewExpenses_Click(object sender, RoutedEventArgs e)
-        {
-            new ViewExpenses().Show();
-        }
-
         private void btn_AddAppt_Click(object sender, RoutedEventArgs e)
         {
             new CreateAppointment().Show();
